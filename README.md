@@ -1,5 +1,5 @@
-Linux Kamarada GNOME appliance
-============================
+LiveSUSE Leap GNOME appliance
+=============================
 
 Checkout the branch from the version you want. For example:
 
