@@ -20,7 +20,7 @@
         </temporary>
       </split>
     </type>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -33,6 +33,7 @@
     <user name='root' pwd='$1$YLLcaw7x$Aibn.gBCAqOH59eegQtyl1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <package name='libreoffice-icon-theme-tango'/>
     <package name='libreoffice-templates-presentation-layouts'/>
     <package name='libreoffice-templates-labels-letter'/>
     <package name='libreoffice-templates-labels-a4'/>
