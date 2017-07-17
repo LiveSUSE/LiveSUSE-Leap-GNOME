@@ -43,6 +43,8 @@
         <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <package name="xdg-user-dirs-gtk"/>
+        <package name="xdg-user-dirs"/>
         <package name="yast2-metapackage-handler"/>
         <package name="yast2-vpn"/>
         <package name="yast2-vm"/>
