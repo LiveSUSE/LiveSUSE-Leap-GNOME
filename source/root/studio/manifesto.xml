@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <studio_uuid>8466bd24-fd59-11df-9f90-475ae2f5345b</studio_uuid>
-  <appliance_uuid>b6cfedd2-5e6c-11e7-2183-4fbb28ae4d82</appliance_uuid>
+  <appliance_uuid>5fb0c2a2-84f9-11e7-6ea7-4fbb28ae4d82</appliance_uuid>
   <config>
-    <image name="LiveSUSE_Leap_42.2_GNOME" displayname="LiveSUSE_Leap_42.2_GNOME" schemaversion="5.2">
+    <image name="LiveSUSE_Leap_42.3_GNOME" displayname="LiveSUSE_Leap_42.3_GNOME" schemaversion="5.2">
       <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>studio-devel@suse.de</contact>
@@ -24,7 +24,7 @@
             </temporary>
           </split>
         </type>
-        <version>0.0.3</version>
+        <version>0.0.2</version>
         <packagemanager>ensconce</packagemanager>
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-force>false</rpm-force>
@@ -34,210 +34,210 @@
         <locale>en_US</locale>
       </preferences>
       <users group="root">
-        <user name="root" pwd="$1$YLLcaw7x$Aibn.gBCAqOH59eegQtyl1" home="/root" shell="/bin/bash"/>
+        <user name="root" pwd="$1$rSd2UwCB$qGVAW/VO7ehT3yBGAUarI." home="/root" shell="/bin/bash"/>
       </users>
-      <repository type="yast2">
-        <source path="http://download.opensuse.org/distribution/leap/42.2/repo/oss/"/>
-      </repository>
       <repository type="rpm-md">
-        <source path="http://download.opensuse.org/update/leap/42.2/oss/"/>
+        <source path="http://download.opensuse.org/update/leap/42.3/oss/"/>
+      </repository>
+      <repository type="yast2">
+        <source path="http://download.opensuse.org/distribution/leap/42.3/repo/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
-        <package name="gnome-tweak-tool"/>
-        <package name="gnome-screenshot"/>
-        <package name="gnome-packagekit"/>
-        <package name="gnome-online-accounts"/>
-        <package name="gnome-color-manager"/>
-        <package name="gnome-documents"/>
-        <package name="libreoffice-icon-theme-tango"/>
-        <package name="libreoffice-templates-presentation-layouts"/>
-        <package name="libreoffice-templates-labels-letter"/>
-        <package name="libreoffice-templates-labels-a4"/>
-        <package name="libreoffice-templates-en"/>
-        <package name="xdg-user-dirs-gtk"/>
-        <package name="xdg-user-dirs"/>
-        <package name="yast2-metapackage-handler"/>
-        <package name="yast2-vpn"/>
-        <package name="yast2-vm"/>
-        <package name="yast2-sound"/>
-        <package name="yast2-snapper"/>
-        <package name="yast2-scanner"/>
-        <package name="yast2-samba-server"/>
-        <package name="yast2-samba-client"/>
-        <package name="yast2-printer"/>
-        <package name="yast2-ntp-client"/>
-        <package name="yast2-nis-client"/>
-        <package name="yast2-nfs-client"/>
-        <package name="yast2-journal"/>
-        <package name="yast2-iscsi-client"/>
-        <package name="yast2-inetd"/>
-        <package name="yast2-fonts"/>
-        <package name="yast2-auth-client"/>
-        <package name="yast2-apparmor"/>
-        <package name="yast2-add-on"/>
-        <package name="glibc-locale"/>
-        <package name="glibc"/>
-        <package name="gsettings-backend-dconf"/>
-        <package name="timezone"/>
-        <package name="zypper"/>
-        <package name="vim"/>
-        <package name="syslog-ng"/>
-        <package name="plymouth"/>
-        <package name="kernel-default"/>
-        <package name="iputils"/>
-        <package name="grub2"/>
-        <package name="patterns-openSUSE-base"/>
-        <package name="branding-openSUSE"/>
-        <package name="e2fsprogs"/>
-        <package name="yast2-firstboot"/>
-        <package name="less"/>
-        <package name="SuSEfirewall2"/>
-        <package name="yast2-x11"/>
-        <package name="gfxboot-branding-openSUSE"/>
-        <package name="grub2-branding-openSUSE"/>
-        <package name="xorg-x11-fonts"/>
-        <package name="xorg-x11-driver-video"/>
-        <package name="xorg-x11-driver-input"/>
-        <package name="xorg-x11"/>
-        <package name="x11-tools"/>
-        <package name="sax3"/>
-        <package name="yast2-control-center-gnome"/>
-        <package name="gnote"/>
-        <package name="libgnomesu"/>
-        <package name="gvfs-backends"/>
-        <package name="gtk3-branding-openSUSE"/>
-        <package name="gnome-terminal"/>
-        <package name="gnome-power-manager"/>
-        <package name="patterns-openSUSE-gnome_utilities"/>
-        <package name="patterns-openSUSE-gnome"/>
-        <package name="grub"/>
-        <package name="gdm"/>
-        <package name="patterns-openSUSE-x11"/>
-        <package name="patterns-openSUSE-apparmor"/>
-        <package name="patterns-openSUSE-apparmor_opt"/>
-        <package name="patterns-openSUSE-enhanced_base"/>
-        <package name="patterns-openSUSE-enhanced_base_opt"/>
-        <package name="patterns-openSUSE-fonts"/>
-        <package name="patterns-openSUSE-fonts_opt"/>
-        <package name="patterns-openSUSE-games"/>
-        <package name="patterns-openSUSE-gnome_admin"/>
-        <package name="patterns-openSUSE-gnome_basis"/>
-        <package name="patterns-openSUSE-gnome_basis_opt"/>
-        <package name="patterns-openSUSE-gnome_games"/>
-        <package name="patterns-openSUSE-gnome_imaging"/>
-        <package name="patterns-openSUSE-gnome_imaging_opt"/>
-        <package name="patterns-openSUSE-gnome_internet"/>
-        <package name="patterns-openSUSE-gnome_multimedia"/>
-        <package name="patterns-openSUSE-gnome_office"/>
-        <package name="patterns-openSUSE-gnome_office_opt"/>
-        <package name="patterns-openSUSE-gnome_yast"/>
-        <package name="patterns-openSUSE-imaging"/>
-        <package name="patterns-openSUSE-imaging_opt"/>
-        <package name="patterns-openSUSE-multimedia"/>
-        <package name="patterns-openSUSE-non_oss"/>
-        <package name="patterns-openSUSE-non_oss_opt"/>
-        <package name="patterns-openSUSE-multimedia_opt"/>
-        <package name="patterns-openSUSE-office"/>
-        <package name="patterns-openSUSE-office_opt"/>
-        <package name="patterns-openSUSE-sw_management"/>
-        <package name="patterns-openSUSE-sw_management_gnome"/>
-        <package name="patterns-openSUSE-x11_opt"/>
-        <package name="patterns-openSUSE-yast2_basis"/>
-        <package name="patterns-openSUSE-gnome_multimedia_opt"/>
-        <package name="gnome-calculator"/>
-        <package name="gnome-clocks"/>
-        <package name="tracker-gui"/>
-        <package name="nautilus"/>
-        <package name="gnome-maps"/>
-        <package name="bijiben"/>
-        <package name="gedit"/>
-        <package name="gnome-weather"/>
-        <package name="aisleriot"/>
-        <package name="gnome-chess"/>
-        <package name="iagno"/>
-        <package name="lightsoff"/>
-        <package name="gnome-mahjongg"/>
-        <package name="gnome-mines"/>
-        <package name="quadrapassel"/>
-        <package name="gnome-sudoku"/>
-        <package name="swell-foop"/>
-        <package name="gimp"/>
-        <package name="inkscape"/>
-        <package name="libreoffice-draw"/>
-        <package name="shotwell"/>
-        <package name="simple-scan"/>
-        <package name="empathy"/>
-        <package name="evolution"/>
-        <package name="MozillaFirefox"/>
-        <package name="liferea"/>
-        <package name="polari"/>
-        <package name="transmission-gtk"/>
-        <package name="gnome-dictionary"/>
-        <package name="libreoffice"/>
-        <package name="libreoffice-writer"/>
-        <package name="libreoffice-calc"/>
-        <package name="libreoffice-impress"/>
-        <package name="libreoffice-base"/>
-        <package name="brasero"/>
-        <package name="cheese"/>
-        <package name="gnome-music"/>
-        <package name="totem"/>
-        <package name="java-1_8_0-openjdk-plugin"/>
-        <package name="alacarte"/>
-        <package name="system-config-printer"/>
-        <package name="deja-dup"/>
-        <package name="gnome-disk-utility"/>
-        <package name="gnome-nettool"/>
-        <package name="gnome-software"/>
-        <package name="xterm"/>
-        <package name="yast2"/>
-        <package name="file-roller"/>
-        <package name="baobab"/>
-        <package name="evince"/>
-        <package name="gnome-font-viewer"/>
-        <package name="gucharmap"/>
-        <package name="eog"/>
-        <package name="seahorse"/>
-        <package name="vinagre"/>
-        <package name="gnome-system-monitor"/>
-        <package name="open-vm-tools"/>
-        <package name="open-vm-tools-desktop"/>
-        <package name="virtualbox-guest-x11"/>
-        <package name="virtualbox-guest-tools"/>
-        <package name="xf86-input-vmmouse"/>
-        <package name="xf86-video-vmware"/>
-        <package name="patterns-openSUSE-laptop"/>
-        <package name="crda"/>
-        <package name="iw"/>
-        <package name="pcmciautils"/>
-        <package name="wireless-regdb"/>
-        <package name="wpa_supplicant"/>
-        <package name="patterns-openSUSE-gnome_laptop"/>
-        <package name="gnome-bluetooth"/>
-        <package name="sudo"/>
-        <package name="yast2-sudo"/>
-        <package name="xdg-utils"/>
-        <package name="NetworkManager"/>
-        <package name="grub2-x86_64-efi"/>
-        <package name="shim" bootinclude="true"/>
-        <package name="gconf2-branding-openSUSE"/>
-        <package name="gdm-branding-openSUSE"/>
-        <package name="gio-branding-openSUSE"/>
-        <package name="gnome-menus-branding-openSUSE"/>
-        <package name="gtk2-branding-openSUSE"/>
-        <package name="hicolor-icon-theme-branding-openSUSE"/>
-        <package name="libpurple-branding-openSUSE"/>
-        <package name="libreoffice-branding-upstream"/>
-        <package name="libsocialweb-branding-openSUSE"/>
-        <package name="MozillaFirefox-branding-openSUSE"/>
-        <package name="NetworkManager-branding-openSUSE"/>
-        <package name="PackageKit-branding-openSUSE"/>
-        <package name="plymouth-branding-openSUSE"/>
-        <package name="systemd-presets-branding-openSUSE"/>
-        <package name="yast2-branding-openSUSE"/>
-        <package name="wallpaper-branding-openSUSE"/>
-        <package name="libreoffice-gnome"/>
         <package name="libreoffice-gtk3"/>
+        <package name="libreoffice-gnome"/>
+        <package name="wallpaper-branding-openSUSE"/>
+        <package name="yast2-branding-openSUSE"/>
+        <package name="systemd-presets-branding-openSUSE"/>
+        <package name="plymouth-branding-openSUSE"/>
+        <package name="PackageKit-branding-openSUSE"/>
+        <package name="NetworkManager-branding-openSUSE"/>
+        <package name="MozillaFirefox-branding-openSUSE"/>
+        <package name="libsocialweb-branding-openSUSE"/>
+        <package name="libreoffice-branding-upstream"/>
+        <package name="libpurple-branding-openSUSE"/>
+        <package name="hicolor-icon-theme-branding-openSUSE"/>
+        <package name="gtk2-branding-openSUSE"/>
+        <package name="gnome-menus-branding-openSUSE"/>
+        <package name="gio-branding-openSUSE"/>
+        <package name="gdm-branding-openSUSE"/>
+        <package name="gconf2-branding-openSUSE"/>
+        <package name="shim" bootinclude="true"/>
+        <package name="grub2-x86_64-efi"/>
+        <package name="NetworkManager"/>
+        <package name="xdg-utils"/>
+        <package name="yast2-sudo"/>
+        <package name="sudo"/>
+        <package name="gnome-bluetooth"/>
+        <package name="patterns-openSUSE-gnome_laptop"/>
+        <package name="wpa_supplicant"/>
+        <package name="wireless-regdb"/>
+        <package name="pcmciautils"/>
+        <package name="iw"/>
+        <package name="crda"/>
+        <package name="patterns-openSUSE-laptop"/>
+        <package name="xf86-video-vmware"/>
+        <package name="xf86-input-vmmouse"/>
+        <package name="virtualbox-guest-tools"/>
+        <package name="virtualbox-guest-x11"/>
+        <package name="open-vm-tools-desktop"/>
+        <package name="open-vm-tools"/>
+        <package name="gnome-system-monitor"/>
+        <package name="vinagre"/>
+        <package name="seahorse"/>
+        <package name="eog"/>
+        <package name="gucharmap"/>
+        <package name="gnome-font-viewer"/>
+        <package name="evince"/>
+        <package name="baobab"/>
+        <package name="file-roller"/>
+        <package name="yast2"/>
+        <package name="xterm"/>
+        <package name="gnome-software"/>
+        <package name="gnome-nettool"/>
+        <package name="gnome-disk-utility"/>
+        <package name="deja-dup"/>
+        <package name="system-config-printer"/>
+        <package name="alacarte"/>
+        <package name="java-1_8_0-openjdk-plugin"/>
+        <package name="totem"/>
+        <package name="gnome-music"/>
+        <package name="cheese"/>
+        <package name="brasero"/>
+        <package name="libreoffice-base"/>
+        <package name="libreoffice-impress"/>
+        <package name="libreoffice-calc"/>
+        <package name="libreoffice-writer"/>
+        <package name="libreoffice"/>
+        <package name="gnome-dictionary"/>
+        <package name="transmission-gtk"/>
+        <package name="polari"/>
+        <package name="liferea"/>
+        <package name="MozillaFirefox"/>
+        <package name="evolution"/>
+        <package name="empathy"/>
+        <package name="simple-scan"/>
+        <package name="shotwell"/>
+        <package name="libreoffice-draw"/>
+        <package name="inkscape"/>
+        <package name="gimp"/>
+        <package name="swell-foop"/>
+        <package name="gnome-sudoku"/>
+        <package name="quadrapassel"/>
+        <package name="gnome-mines"/>
+        <package name="gnome-mahjongg"/>
+        <package name="lightsoff"/>
+        <package name="iagno"/>
+        <package name="gnome-chess"/>
+        <package name="aisleriot"/>
+        <package name="gnome-weather"/>
+        <package name="gedit"/>
+        <package name="bijiben"/>
+        <package name="gnome-maps"/>
+        <package name="nautilus"/>
+        <package name="tracker-gui"/>
+        <package name="gnome-clocks"/>
+        <package name="gnome-calculator"/>
+        <package name="patterns-openSUSE-gnome_multimedia_opt"/>
+        <package name="patterns-openSUSE-yast2_basis"/>
+        <package name="patterns-openSUSE-x11_opt"/>
+        <package name="patterns-openSUSE-sw_management_gnome"/>
+        <package name="patterns-openSUSE-sw_management"/>
+        <package name="patterns-openSUSE-office_opt"/>
+        <package name="patterns-openSUSE-office"/>
+        <package name="patterns-openSUSE-multimedia_opt"/>
+        <package name="patterns-openSUSE-non_oss_opt"/>
+        <package name="patterns-openSUSE-non_oss"/>
+        <package name="patterns-openSUSE-multimedia"/>
+        <package name="patterns-openSUSE-imaging_opt"/>
+        <package name="patterns-openSUSE-imaging"/>
+        <package name="patterns-openSUSE-gnome_yast"/>
+        <package name="patterns-openSUSE-gnome_office_opt"/>
+        <package name="patterns-openSUSE-gnome_office"/>
+        <package name="patterns-openSUSE-gnome_multimedia"/>
+        <package name="patterns-openSUSE-gnome_internet"/>
+        <package name="patterns-openSUSE-gnome_imaging_opt"/>
+        <package name="patterns-openSUSE-gnome_imaging"/>
+        <package name="patterns-openSUSE-gnome_games"/>
+        <package name="patterns-openSUSE-gnome_basis_opt"/>
+        <package name="patterns-openSUSE-gnome_basis"/>
+        <package name="patterns-openSUSE-gnome_admin"/>
+        <package name="patterns-openSUSE-games"/>
+        <package name="patterns-openSUSE-fonts_opt"/>
+        <package name="patterns-openSUSE-fonts"/>
+        <package name="patterns-openSUSE-enhanced_base_opt"/>
+        <package name="patterns-openSUSE-enhanced_base"/>
+        <package name="patterns-openSUSE-apparmor_opt"/>
+        <package name="patterns-openSUSE-apparmor"/>
+        <package name="patterns-openSUSE-x11"/>
+        <package name="gdm"/>
+        <package name="grub"/>
+        <package name="patterns-openSUSE-gnome"/>
+        <package name="patterns-openSUSE-gnome_utilities"/>
+        <package name="gnome-power-manager"/>
+        <package name="gnome-terminal"/>
+        <package name="gtk3-branding-openSUSE"/>
+        <package name="gvfs-backends"/>
+        <package name="libgnomesu"/>
+        <package name="gnote"/>
+        <package name="yast2-control-center-gnome"/>
+        <package name="sax3"/>
+        <package name="x11-tools"/>
+        <package name="xorg-x11"/>
+        <package name="xorg-x11-driver-input"/>
+        <package name="xorg-x11-driver-video"/>
+        <package name="xorg-x11-fonts"/>
+        <package name="grub2-branding-openSUSE"/>
+        <package name="gfxboot-branding-openSUSE"/>
+        <package name="yast2-x11"/>
+        <package name="SuSEfirewall2"/>
+        <package name="less"/>
+        <package name="yast2-firstboot"/>
+        <package name="e2fsprogs"/>
+        <package name="branding-openSUSE"/>
+        <package name="patterns-openSUSE-base"/>
+        <package name="grub2"/>
+        <package name="iputils"/>
+        <package name="kernel-default"/>
+        <package name="plymouth"/>
+        <package name="syslog-ng"/>
+        <package name="vim"/>
+        <package name="zypper"/>
+        <package name="timezone"/>
+        <package name="gsettings-backend-dconf"/>
+        <package name="glibc"/>
+        <package name="glibc-locale"/>
+        <package name="yast2-add-on"/>
+        <package name="yast2-apparmor"/>
+        <package name="yast2-auth-client"/>
+        <package name="yast2-fonts"/>
+        <package name="yast2-inetd"/>
+        <package name="yast2-iscsi-client"/>
+        <package name="yast2-journal"/>
+        <package name="yast2-nfs-client"/>
+        <package name="yast2-nis-client"/>
+        <package name="yast2-ntp-client"/>
+        <package name="yast2-printer"/>
+        <package name="yast2-samba-client"/>
+        <package name="yast2-samba-server"/>
+        <package name="yast2-scanner"/>
+        <package name="yast2-snapper"/>
+        <package name="yast2-sound"/>
+        <package name="yast2-vm"/>
+        <package name="yast2-vpn"/>
+        <package name="yast2-metapackage-handler"/>
+        <package name="xdg-user-dirs"/>
+        <package name="xdg-user-dirs-gtk"/>
+        <package name="libreoffice-templates-en"/>
+        <package name="libreoffice-templates-labels-a4"/>
+        <package name="libreoffice-templates-labels-letter"/>
+        <package name="libreoffice-templates-presentation-layouts"/>
+        <package name="libreoffice-icon-theme-tango"/>
+        <package name="gnome-documents"/>
+        <package name="gnome-color-manager"/>
+        <package name="gnome-online-accounts"/>
+        <package name="gnome-packagekit"/>
+        <package name="gnome-screenshot"/>
+        <package name="gnome-tweak-tool"/>
         <package name="yast2-live-installer"/>
         <package name="yast2-users"/>
         <package name="btrfsprogs"/>
@@ -252,10 +252,10 @@
       </packages>
     </image>
   </config>
-  <extra_config name="LiveSUSE_Leap_42.2_GNOME">
-    <appliance_id>1723268</appliance_id>
+  <extra_config name="LiveSUSE_Leap_42.3_GNOME">
+    <appliance_id>1732561</appliance_id>
     <arch>x86_64</arch>
-    <version>0.0.3</version>
+    <version>0.0.2</version>
     <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
     <background>ee/74452ca646d75e5516fe5db8836e76</background>
     <base_system>Leap_42.1</base_system>
@@ -272,18 +272,18 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>3330</estimated_size>
+    <estimated_size>3260</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>
     <check_supportability>false</check_supportability>
-    <repository type="yast2">
-      <source path="http://download.opensuse.org/distribution/leap/42.2/repo/oss/" internal="false"/>
-      <name>openSUSE Leap 42.2 OSS</name>
-    </repository>
     <repository type="rpm-md">
-      <source path="http://download.opensuse.org/update/leap/42.2/oss/" internal="false"/>
-      <name>leap 42.2 updates</name>
+      <source path="http://download.opensuse.org/update/leap/42.3/oss/" internal="false"/>
+      <name>openSUSE Leap 42.3 Updates</name>
+    </repository>
+    <repository type="yast2">
+      <source path="http://download.opensuse.org/distribution/leap/42.3/repo/oss/" internal="false"/>
+      <name>OpenSuSE-42.3-oss</name>
     </repository>
     <network config="network_manager">
     </network>
