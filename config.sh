@@ -109,10 +109,3 @@ true
 echo '** Rehashing SSL Certificates...'
 c_rehash
 
-
-sh /studio/configure_gdm_theme.sh
-
-
-
-sh /studio/configure_gnome_background.sh
-
