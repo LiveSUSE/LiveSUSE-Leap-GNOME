@@ -1,8 +1,8 @@
-<image name="LiveSUSE_Leap_42.3_GNOME" schemaversion="5.2" displayname="LiveSUSE_Leap_42.3_GNOME">
+<image name="LiveSUSE_Leap_GNOME" schemaversion="5.2" displayname="LiveSUSE_Leap_GNOME">
   <description type="system">
     <author>Projeto Linux Kamarada</author>
-    <contact>studio-devel@suse.de</contact>
-    <specification>openSUSE Leap 42.1 GNOME</specification>
+    <contact>linuxkamarada@gmail.com</contact>
+    <specification>LiveSUSE Leap 42.3 GNOME</specification>
   </description>
   <preferences>
     <type boot="isoboot/suse-leap42.1" bootloader="grub2" checkprebuilt="true" flags="overlay" firmware="uefi" fsnocheck="true" hybrid="true" image="iso" hybridpersistent="true" hybridpersistent_filesystem="ext4" kernelcmdline="splash" volid="LiveSUSE Leap 42.3 GNOME">
@@ -19,7 +19,7 @@
         </temporary>
       </split>
     </type>
-    <version>0.0.5</version>
+    <version>42.3.2017113001</version>
     <boot-theme>studio</boot-theme>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
