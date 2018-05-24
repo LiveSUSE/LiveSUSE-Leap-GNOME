@@ -27,15 +27,38 @@ suseSetupProduct
 suseImportBuildKey
 
 # Activate services
-suseInsertService sshd
-if [[ ${kiwi_type} =~ oem|vmx ]];then
-    suseInsertService grub_config
-else
-    suseRemoveService grub_config
-fi
+suseRemoveService wicked
+suseInsertService NetworkManager
+suseInsertService SuSEfirewall2
 
-# Setup default target, multi-user
-baseSetRunlevel 3
+# Setup default target, multi-user GUI
+baseSetRunlevel 5
+
+# Sysconfig update
+baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER gdm
+baseUpdateSysConfig /etc/sysconfig/windowmanager DEFAULT_WM gnome
+
+# /etc/sudoers hack to fix #297695
+# (Installation Live DVD: no need to ask for password of root)
+# https://bugzilla.novell.com/show_bug.cgi?id=297695
+sed -i -e "s/ALL ALL=(ALL) ALL/ALL ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
+chmod 0440 /etc/sudoers
+
+# Create LiveDVD user linux
+/usr/sbin/useradd -m -u 999 linux -c "LiveDVD User" -p ""
+
+# delete passwords
+passwd -d root
+passwd -d linux
+# empty password is ok
+pam-config -a --nullok
+
+# bug 544314, we only want to disable the bit in common-auth-pc
+# https://bugzilla.novell.com/show_bug.cgi?id=544314
+sed -i -e 's,^\(.*pam_gnome_keyring.so.*\),#\1,'  /etc/pam.d/common-auth-pc
+
+# Automatically log in user linux
+baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER_AUTOLOGIN linux
 
 # Official repositories
 # (as found in http://download.opensuse.org/distribution/leap/15.0/repo/oss/control.xml)
@@ -51,6 +74,13 @@ zypper addrepo -d -K -n "openSUSE-Leap-15.0-Update-Debug-Non-Oss" http://downloa
 zypper addrepo -d -K -n "openSUSE-Leap-15.0-Source" http://download.opensuse.org/source/distribution/leap/15.0/repo/oss/ repo-source
 zypper addrepo -d -K -n "openSUSE-Leap-15.0-Source-Non-Oss" http://download.opensuse.org/source/distribution/leap/15.0/repo/non-oss/ repo-source-non-oss
 
+# openSUSE Bug 984330 overlayfs requires AppArmor attach_disconnected flag
+# https://bugzilla.opensuse.org/show_bug.cgi?id=984330
+
+# Linux Kamarada issue #1 unable to ping
+# https://github.com/kamarada/kiwi-config-Kamarada/issues/1
+sed -i -e 's/\/{usr\/,}bin\/ping {/\/{usr\/,}bin\/ping (attach_disconnected) {/g' /etc/apparmor.d/bin.ping
+
 # SuSEconfig
 suseConfig
 
@@ -62,5 +92,4 @@ baseCleanMount
 #======================================
 # Exit safely
 #--------------------------------------
-
 exit 0
