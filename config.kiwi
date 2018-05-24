@@ -67,6 +67,10 @@
         <!-- Check Installation Media -->
         <package name="checkmedia"/>
 
+        <!-- Enable support for UEFI secure boot -->
+        <package name="shim"/>
+        <package name="grub2-x86_64-efi" arch="x86_64"/>
+
         <package name="plymouth-branding-openSUSE"/>
         <package name="plymouth-dracut"/>
         <package name="grub2-branding-openSUSE"/>
@@ -74,7 +78,6 @@
         <package name="iputils"/>
         <package name="vim"/>
         <package name="grub2"/>
-        <package name="grub2-x86_64-efi" arch="x86_64"/>
         <package name="grub2-i386-pc"/>
         <package name="syslinux"/>
         <package name="lvm2"/>
@@ -89,7 +92,6 @@
         <package name="bash-completion"/>
         <package name="dhcp-client"/>
         <package name="which"/>
-        <package name="shim"/>
         <package name="kernel-default"/>
         <package name="timezone"/>
         <package name="gfxboot-branding-openSUSE"/>
