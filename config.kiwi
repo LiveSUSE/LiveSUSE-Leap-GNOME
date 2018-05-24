@@ -71,6 +71,11 @@
         <package name="shim"/>
         <package name="grub2-x86_64-efi" arch="x86_64"/>
 
+        <!-- Bootsplash and graphics boot related packages -->
+        <package name="gfxboot-branding-openSUSE"/>
+        <package name="grub2-branding-openSUSE"/>
+        <package name="dracut-kiwi-live"/>
+
         <package name="plymouth-branding-openSUSE"/>
         <package name="plymouth-dracut"/>
         <package name="grub2-branding-openSUSE"/>
