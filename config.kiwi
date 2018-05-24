@@ -51,10 +51,18 @@
         <package name="patterns-base-sw_management"/>
         <!-- have choice for pattern() = apparmor needed by patterns-base-enhanced_base -->
         <package name="patterns-base-apparmor"/>
-      
+
         <!-- Laptop pattern -->
         <package name="patterns-openSUSE-laptop"/>
         <package name="patterns-openSUSE-gnome_laptop"/>
+
+        <!-- VirtualBox and VMware support -->
+        <package name="virtualbox-guest-x11"/>
+        <package name="virtualbox-guest-tools"/>
+        <package name="xf86-video-vmware"/>
+        <package name="xf86-input-vmmouse"/>
+        <package name="open-vm-tools"/>
+        <package name="open-vm-tools-desktop"/>
 
         <package name="checkmedia"/>
         <package name="patterns-openSUSE-base"/>
