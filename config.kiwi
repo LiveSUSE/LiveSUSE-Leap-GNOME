@@ -47,6 +47,8 @@
     <packages type="image">
         <package name="checkmedia"/>
         <package name="patterns-openSUSE-base"/>
+        <!-- have choice for pattern() = minimal_base needed by patterns-base-base -->
+        <package name="patterns-base-minimal_base"/>
         <package name="plymouth-branding-openSUSE"/>
         <package name="plymouth-dracut"/>
         <package name="grub2-branding-openSUSE"/>
@@ -72,11 +74,14 @@
         <package name="shim"/>
         <package name="kernel-default"/>
         <package name="timezone"/>
-    </packages>
-    <packages type="iso">
         <package name="gfxboot-branding-openSUSE"/>
         <package name="dracut-kiwi-live"/>
     </packages>
+    <!-- Those are not found this way, I don't know why: -->
+    <!--<packages type="iso">
+        <package name="gfxboot-branding-openSUSE"/>
+        <package name="dracut-kiwi-live"/>
+    </packages>-->
     <!--<packages type="oem">
         <package name="gfxboot-branding-openSUSE"/>
         <package name="dracut-kiwi-oem-repart"/>
@@ -89,5 +94,7 @@
         <package name="cracklib-dict-full"/>
         <package name="ca-certificates"/>
         <package name="openSUSE-release"/>
+        <!-- have choice for product_flavor(openSUSE) needed by openSUSE-release -->
+        <package name="openSUSE-release-livecd-gnome"/>
     </packages>
 </image>
