@@ -51,14 +51,16 @@
         <package name="patterns-base-sw_management"/>
         <!-- have choice for pattern() = apparmor needed by patterns-base-enhanced_base -->
         <package name="patterns-base-apparmor"/>
+        <!-- nothing provides kernel-uname-r = 4.12.14-lp150.7-default needed by virtualbox-guest-kmp-default -->
+        <package name="kernel-default"/>
 
         <!-- Laptop pattern -->
         <package name="patterns-openSUSE-laptop"/>
         <package name="patterns-openSUSE-gnome_laptop"/>
 
         <!-- VirtualBox and VMware support -->
-        <package name="virtualbox-guest-x11"/>
-        <package name="virtualbox-guest-tools"/>
+        <!--<package name="virtualbox-guest-x11"/>
+        <package name="virtualbox-guest-tools"/>-->
         <package name="xf86-video-vmware"/>
         <package name="xf86-input-vmmouse"/>
         <package name="open-vm-tools"/>
