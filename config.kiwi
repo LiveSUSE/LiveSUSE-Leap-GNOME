@@ -38,14 +38,22 @@
         <package name="patterns-openSUSE-x11"/>
         <package name="patterns-openSUSE-gnome"/>
         <package name="gdm"/>
+        <!-- have choice for pattern() = minimal_base needed by patterns-base-base -->
+        <package name="patterns-base-minimal_base"/>
         <!-- nothing provides this-is-only-for-build-envs needed by libsystemd0-mini -->
         <!-- https://lists.opensuse.org/opensuse-factory/2017-12/msg00085.html -->
         <package name="systemd"/>
+        <!-- have choice for pattern() = x11_enhanced needed by patterns-base-x11 -->
+        <package name="patterns-base-x11_enhanced"/>
+        <!-- have choice for pattern() = enhanced_base needed by patterns-base-x11_opt -->
+        <package name="patterns-base-enhanced_base"/>
+        <!-- have choice for pattern() = sw_management needed by patterns-base-enhanced_base -->
+        <package name="patterns-base-sw_management"/>
+        <!-- have choice for pattern() = apparmor needed by patterns-base-enhanced_base -->
+        <package name="patterns-base-apparmor"/>
 
         <package name="checkmedia"/>
         <package name="patterns-openSUSE-base"/>
-        <!-- have choice for pattern() = minimal_base needed by patterns-base-base -->
-        <package name="patterns-base-minimal_base"/>
         <package name="plymouth-branding-openSUSE"/>
         <package name="plymouth-dracut"/>
         <package name="grub2-branding-openSUSE"/>
