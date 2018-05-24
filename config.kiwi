@@ -34,9 +34,9 @@
     <packages type="image" patternType="plusRecommended">
 		<!-- Clean openSUSE Leap 15.0 install with GNOME desktop -->
         <!-- http://download.opensuse.org/distribution/leap/15.0/repo/oss/control.xml -->
-        <package name="patterns-openSUSE-base"/>
-        <package name="patterns-openSUSE-x11"/>
-        <package name="patterns-openSUSE-gnome"/>
+        <package name="patterns-base-base"/>
+        <package name="patterns-base-x11"/>
+        <package name="patterns-gnome-gnome"/>
         <package name="gdm"/>
         <!-- have choice for pattern() = minimal_base needed by patterns-base-base -->
         <package name="patterns-base-minimal_base"/>
@@ -55,8 +55,9 @@
         <package name="kernel-default"/>
 
         <!-- Laptop pattern -->
-        <package name="patterns-openSUSE-laptop"/>
-        <package name="patterns-openSUSE-gnome_laptop"/>
+        <package name="patterns-desktop-laptop"/>
+        <!-- nothing provides patterns-gnome-gnome_laptop -->
+        <!--<package name="patterns-gnome-gnome_laptop"/>-->
 
         <!-- VirtualBox and VMware support -->
         <!--<package name="virtualbox-guest-x11"/>
@@ -91,8 +92,8 @@
         <package name="glibc-locale"/>
         <package name="openSUSE-release"/>
         <!-- have choice for product_flavor(openSUSE) needed by openSUSE-release -->
-        <package name="openSUSE-release-livecd-gnome"/><!-- ? -->
-        <!--<package name="openSUSE-release-appliance-custom"/>-->
+        <!--<package name="openSUSE-release-livecd-gnome"/>
+        <package name="openSUSE-release-appliance-custom"/>-->
         <package name="udev"/>
     </packages>
 </image>
