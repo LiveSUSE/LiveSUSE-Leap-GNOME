@@ -51,6 +51,10 @@
         <package name="patterns-base-sw_management"/>
         <!-- have choice for pattern() = apparmor needed by patterns-base-enhanced_base -->
         <package name="patterns-base-apparmor"/>
+      
+        <!-- Laptop pattern -->
+        <package name="patterns-openSUSE-laptop"/>
+        <package name="patterns-openSUSE-gnome_laptop"/>
 
         <package name="checkmedia"/>
         <package name="patterns-openSUSE-base"/>
