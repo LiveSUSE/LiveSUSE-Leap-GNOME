@@ -1,20 +1,5 @@
 #!/bin/bash
-#================
-# FILE          : config.sh
-#----------------
-# PROJECT       : OpenSuSE KIWI Image System
-# COPYRIGHT     : (c) 2006 SUSE LINUX Products GmbH. All rights reserved
-#               :
-# AUTHOR        : Marcus Schaefer <ms@suse.de>
-#               :
-# BELONGS TO    : Operating System images
-#               :
-# DESCRIPTION   : configuration script for SUSE based
-#               : operating systems
-#               :
-#               :
-# STATUS        : BETA
-#----------------
+
 #======================================
 # Functions...
 #--------------------------------------
@@ -32,18 +17,16 @@ echo "Configure image: [$kiwi_iname]..."
 baseMount
 
 #======================================
-# Setup baseproduct link
+# Call configuration code/functions
 #--------------------------------------
+
+# Setup baseproduct link
 suseSetupProduct
 
-#======================================
 # Add missing gpg keys to rpm
-#--------------------------------------
 suseImportBuildKey
 
-#======================================
 # Activate services
-#--------------------------------------
 suseInsertService sshd
 if [[ ${kiwi_type} =~ oem|vmx ]];then
     suseInsertService grub_config
@@ -51,37 +34,33 @@ else
     suseRemoveService grub_config
 fi
 
-#======================================
 # Setup default target, multi-user
-#--------------------------------------
 baseSetRunlevel 3
 
-#==========================================
-# remove package docs
-#------------------------------------------
-rm -rf /usr/share/doc/packages/*
-rm -rf /usr/share/doc/manual/*
-rm -rf /opt/kde*
+# Official repositories
+# (as found in http://download.opensuse.org/distribution/leap/15.0/repo/oss/control.xml)
+rm /etc/zypp/repos.d/*.repo
+zypper addrepo -f -K -n "openSUSE-Leap-15.0-Update" http://download.opensuse.org/update/leap/15.0/oss/ repo-update
+zypper addrepo -f -K -n "openSUSE-Leap-15.0-Update-Non-Oss" http://download.opensuse.org/update/leap/15.0/non-oss/ repo-update-non-oss
+zypper addrepo -f -K -n "openSUSE-Leap-15.0-Oss" http://download.opensuse.org/distribution/leap/15.0/repo/oss/ repo-oss
+zypper addrepo -f -K -n "openSUSE-Leap-15.0-Non-Oss" http://download.opensuse.org/distribution/leap/15.0/repo/non-oss/ repo-non-oss
+zypper addrepo -d -K -n "openSUSE-Leap-15.0-Debug" http://download.opensuse.org/debug/distribution/leap/15.0/repo/oss/ repo-debug
+zypper addrepo -d -K -n "openSUSE-Leap-15.0-Debug-Non-Oss" http://download.opensuse.org/debug/distribution/leap/15.0/repo/non-oss/ repo-debug-non-oss
+zypper addrepo -d -K -n "openSUSE-Leap-15.0-Update-Debug" http://download.opensuse.org/debug/update/leap/15.0/oss repo-debug-update
+zypper addrepo -d -K -n "openSUSE-Leap-15.0-Update-Debug-Non-Oss" http://download.opensuse.org/debug/update/leap/15.0/non-oss/ repo-debug-update-non-oss
+zypper addrepo -d -K -n "openSUSE-Leap-15.0-Source" http://download.opensuse.org/source/distribution/leap/15.0/repo/oss/ repo-source
+zypper addrepo -d -K -n "openSUSE-Leap-15.0-Source-Non-Oss" http://download.opensuse.org/source/distribution/leap/15.0/repo/non-oss/ repo-source-non-oss
 
-#======================================
-# only basic version of vim is
-# installed; no syntax highlighting
-#--------------------------------------
-sed -i -e's/^syntax on/" syntax on/' /etc/vimrc
-
-#======================================
 # SuSEconfig
-#--------------------------------------
 suseConfig
-
-#======================================
-# Remove yast if not in use
-#--------------------------------------
-suseRemoveYaST
 
 #======================================
 # Umount kernel filesystems
 #--------------------------------------
 baseCleanMount
+
+#======================================
+# Exit safely
+#--------------------------------------
 
 exit 0
