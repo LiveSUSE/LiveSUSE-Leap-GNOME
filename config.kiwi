@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image displayname="LiveSUSE Leap 15.0 GNOME" name="LiveSUSE-Leap-15.0-GNOME" schemaversion="6.8">
+<image displayname="LiveSUSE Leap 15.0 GNOME" name="LiveSUSE-Leap-15.0-GNOME" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
@@ -16,7 +16,7 @@
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>true</rpm-excludedocs>
         <timezone>Europe/Berlin</timezone>
-        <type firmware="efi" flags="overlay" hybrid="true" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" primary="true" volid="LiveSUSE_Leap_15.0_GNOME"/>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" primary="true" volid="LiveSUSE_Leap_15.0_GNOME"/>
         <version>15.0.2018020801</version>
     </preferences>
     <users>
@@ -53,15 +53,19 @@
         <package name="patterns-base-apparmor"/>
         <!-- nothing provides kernel-uname-r = 4.12.14-lp150.7-default needed by virtualbox-guest-kmp-default -->
         <package name="kernel-default"/>
+      	<!-- warning: %post(libzypp-plugin-appdata-1.0.1+git.20180327-lp150.1.1.noarch) scriptlet failed, exit status 6 -->
+      	<!-- https://groups.google.com/forum/#!topic/kiwi-images/BP24w2iEHXU -->
+      	<!-- https://build.opensuse.org/package/view_file/openSUSE:Leap:15.0:Images/livecd-leap-gnome/pre-checkin.sh?expand=1 -->
+      	<!-- https://github.com/openSUSE/obs-build/issues/420 -->
+      	<ignore name="libzypp-plugin-appdata"/>
 
         <!-- Laptop pattern -->
         <package name="patterns-desktop-laptop"/>
-        <!-- nothing provides patterns-gnome-gnome_laptop -->
-        <!--<package name="patterns-gnome-gnome_laptop"/>-->
 
         <!-- VirtualBox and VMware support -->
-        <!--<package name="virtualbox-guest-x11"/>
-        <package name="virtualbox-guest-tools"/>-->
+      	<package name="virtualbox-guest-kmp-default"/>
+        <package name="virtualbox-guest-x11"/>
+        <package name="virtualbox-guest-tools"/>
         <package name="xf86-video-vmware"/>
         <package name="xf86-input-vmmouse"/>
         <package name="open-vm-tools"/>
@@ -91,9 +95,6 @@
         <package name="filesystem"/>
         <package name="glibc-locale"/>
         <package name="openSUSE-release"/>
-        <!-- have choice for product_flavor(openSUSE) needed by openSUSE-release -->
-        <!--<package name="openSUSE-release-livecd-gnome"/>
-        <package name="openSUSE-release-appliance-custom"/>-->
         <package name="udev"/>
     </packages>
 </image>
