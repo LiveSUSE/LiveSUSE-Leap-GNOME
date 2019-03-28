@@ -37,6 +37,11 @@
         <package name="patterns-base-base"/>
         <package name="patterns-base-x11"/>
         <package name="patterns-gnome-gnome"/>
+        <!-- have choice for lightdm-greeter needed by lightdm -->
+        <package name="lightdm-gtk-greeter"/>
+
+
+
         <package name="gdm"/>
         <!-- have choice for pattern() = minimal_base needed by patterns-base-base -->
         <package name="patterns-base-minimal_base"/>
@@ -89,7 +94,7 @@
         <package name="dracut-kiwi-live"/>
     </packages>-->
     <packages type="bootstrap">
-		<package name="branding-openSUSE"/>
+        <package name="branding-openSUSE"/>
         <package name="ca-certificates"/>
         <package name="cracklib-dict-full"/>
         <package name="filesystem"/>
