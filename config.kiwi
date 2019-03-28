@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image displayname="LiveSUSE Leap 15.0 GNOME" name="LiveSUSE-Leap-15.0-GNOME" schemaversion="6.9">
+<image displayname="LiveSUSE Leap 15.1 GNOME" name="LiveSUSE-Leap-15.1-GNOME" schemaversion="6.9">
     <description type="system">
         <author>Projeto Linux Kamarada</author>
         <contact>linuxkamarada@gmail.com</contact>
         <specification>
-            LiveSUSE Leap 15.0 GNOME is an image as close as possible to a clean openSUSE Leap 15.0 install with GNOME desktop
+            LiveSUSE Leap 15.1 GNOME is an image as close as possible to a clean openSUSE Leap 15.1 install with GNOME desktop
         </specification>
     </description>
     <preferences>
@@ -16,8 +16,8 @@
         <rpm-check-signatures>false</rpm-check-signatures>
         <rpm-excludedocs>true</rpm-excludedocs>
         <timezone>Europe/Berlin</timezone>
-        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" primary="true" volid="LiveSUSE_Leap_15.0_GNOME"/>
-        <version>15.0.2018020801</version>
+        <type firmware="efi" flags="overlay" hybridpersistent="true" hybridpersistent_filesystem="ext4" image="iso" kernelcmdline="splash" mediacheck="true" primary="true" volid="LiveSUSE_Leap_15.1_GNOME"/>
+        <version>15.1</version>
     </preferences>
     <users>
         <user name="root" groups="root" home="/root"/>
@@ -26,14 +26,14 @@
         <source path="obs://Virtualization:Appliances:Builder/Factory"/>
     </repository>
     <repository alias="repo-oss" imageinclude="true" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.0/standard"/>
+        <source path="obs://openSUSE:Leap:15.1/standard"/>
     </repository>
     <repository alias="repo-update" imageinclude="true" type="rpm-md">
-        <source path="obs://openSUSE:Leap:15.0:Update/standard"/>
+        <source path="obs://openSUSE:Leap:15.1:Update/standard"/>
     </repository>
     <packages type="image" patternType="plusRecommended">
-		<!-- Clean openSUSE Leap 15.0 install with GNOME desktop -->
-        <!-- http://download.opensuse.org/distribution/leap/15.0/repo/oss/control.xml -->
+        <!-- Clean openSUSE Leap 15.1 install with GNOME desktop -->
+        <!-- http://download.opensuse.org/distribution/leap/15.1/repo/oss/control.xml -->
         <package name="patterns-base-base"/>
         <package name="patterns-base-x11"/>
         <package name="patterns-gnome-gnome"/>
